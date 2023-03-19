@@ -10,6 +10,12 @@
 			margin: 0;
 			padding: 0;
 		}
+		
+		h1 {
+			text-align: center;
+			margin-bottom: 20px;
+			font-size: 2rem;
+		}
 
 		body {
 			font-family: "Courier New", monospace;
@@ -58,8 +64,21 @@
 			border-color: #7c7c7c;
 			outline: none;
 		}
+		
+		@media screen and (max-width: 768px) {
+			h1 {
+				font-size: 1.5rem;
+			}
+		}
+
+		@media screen and (max-width: 480px) {
+			h1 {
+				font-size: 1.2rem;
+			}
+		}
 
 		@media screen and (min-width: 768px) {
+
 			.form-container {
 				flex-direction: row;
 			}
