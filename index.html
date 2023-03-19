@@ -34,11 +34,29 @@
 			margin-bottom: 20px;
 		}
 
-		.form-container label,
+		.form-container label {
+			display: block;
+			font-weight: bold;
+			margin-bottom: 5px;
+		}
+		
 		.form-container input,
 		.form-container select {
 			flex-basis: 45%;
-			margin-bottom: 10px;
+			padding: 10px;
+			border: 2px solid #ccc;
+			border-radius: 5px;
+			font-family: 'Courier New', Courier, monospace;
+			font-size: 14px;
+			background-color: #f0f0f0;
+			margin-bottom: 20px;
+			width: 100%;
+			box-sizing: border-box;
+		}
+		.form-container input:focus,
+		.form-container select:focus {
+			border-color: #7c7c7c;
+			outline: none;
 		}
 
 		@media screen and (max-width: 600px) {
@@ -127,16 +145,16 @@
         <h1>Trading Calculator</h1>
 
         <div class="form-container">
-			<label for="funds">Funds:</label>
+			<label for="funds">Funds</label>
 			<input type="number" id="funds" step="any" inputmode="decimal" pattern="[0-9]*">
 			<br>
-			<label for="stopPrice">Stop Price:</label>
+			<label for="stopPrice">Stop Price</label>
 			<input type="number" id="stopPrice" step="any" inputmode="decimal" pattern="[0-9]*">
 			<br>
-			<label for="curPrice">Current Price:</label>
+			<label for="curPrice">Current Price</label>
 			<input type="number" id="curPrice" step="any" inputmode="decimal" pattern="[0-9]*">
 			<br>
-			<label for="targetPrice">Target Price:</label>
+			<label for="targetPrice">Target Price</label>
 			<input type="number" id="targetPrice" step="any" inputmode="decimal" pattern="[0-9]*">
             <br>
             <label for="product">Product</label>
