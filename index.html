@@ -242,10 +242,12 @@
                         <td>Unit Loss</td>
                         <td><span id="unitLoss"></span></td>
                     </tr>
+                    
                     <tr>
-                        <td>Win Loss Ratio</td>
-                        <td><span id="winLossRatio"></span></td>
+                        <td>Win Loss Ratio:</td>
+                        <td id="winLossRatioCell"><span id="winLossRatio"></span></td>
                     </tr>
+                    
                     <tr>
                         <td>Unit Bet</td>
                         <td><span id="unitBet"></span></td>
@@ -335,7 +337,19 @@
             document.getElementById("targetWin").innerText = targetWin.toFixed(1);
             document.getElementById("betLoss").innerText = betLoss.toFixed(2);
             document.getElementById("unitLoss").innerText = unitLoss.toFixed(2);
-            document.getElementById("winLossRatio").innerText = winLossRatio.toFixed(1);
+            
+            const winLossRatioElement = document.getElementById("winLossRatio");
+            const winLossRatioCell = document.getElementById("winLossRatioCell");
+            winLossRatioElement.innerText = winLossRatio.toFixed(1);
+
+            if (winLossRatio < 1) {
+                winLossRatioCell.style.backgroundColor = "red";
+                winLossRatioCell.style.color = "white";
+            } else {
+                winLossRatioCell.style.backgroundColor = "green";
+                winLossRatioCell.style.color = "white";
+            }
+            
             document.getElementById("unitBet").innerText = unitBet.toFixed(2);
         }
 
